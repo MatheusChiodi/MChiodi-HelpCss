@@ -1,0 +1,144 @@
+[
+  {
+    "tag": "Texto",
+    "description": "Classes relacionadas à tipografia e cor do texto.",
+    "classes": [
+      {
+        "name": "color",
+        "label": "Cor do texto",
+        "explanation": "Define a cor do texto dentro do elemento. Pode ser nome de cor, hexadecimal, RGB ou HSL.",
+        "example": "<p style=\"color: red;\">Texto vermelho</p>",
+        "professionalTip": "Profissionais usam 'color' para garantir contraste e acessibilidade. Sempre teste em diferentes fundos.",
+        "variables": [
+          "red",
+          "#333",
+          "rgba(0,0,0,0.8)",
+          "hsl(0, 100%, 50%)",
+          "inherit"
+        ]
+      },
+      {
+        "name": "font-size",
+        "label": "Tamanho da fonte",
+        "explanation": "Controla o tamanho das letras. Pode usar px, em, rem e outros.",
+        "example": "<h1 style=\"font-size: 32px;\">Título grande</h1>",
+        "professionalTip": "Prefira unidades relativas como 'rem' para responsividade.",
+        "variables": [
+          "12px",
+          "1rem",
+          "2em",
+          "larger",
+          "smaller"
+        ]
+      },
+      {
+        "name": "font-weight",
+        "label": "Peso da fonte (negrito, normal...)",
+        "explanation": "Define a espessura da fonte, de leve a pesada.",
+        "example": "<span style=\"font-weight: 700;\">Texto negrito</span>",
+        "professionalTip": "Use pesos diferentes para criar hierarquia visual.",
+        "variables": [
+          "normal",
+          "bold",
+          "100",
+          "400",
+          "700",
+          "900"
+        ]
+      },
+      {
+        "name": "font-family",
+        "label": "Família da fonte",
+        "explanation": "Escolhe o tipo de letra (Arial, Verdana, etc).",
+        "example": "<p style=\"font-family: Arial, sans-serif;\">Texto com Arial</p>",
+        "professionalTip": "Sempre defina fallback com 'sans-serif' ou 'monospace'.",
+        "variables": [
+          "Arial",
+          "Georgia",
+          "'Courier New'",
+          "sans-serif",
+          "monospace"
+        ]
+      },
+      {
+        "name": "font-style",
+        "label": "Estilo da fonte (itálico...)",
+        "explanation": "Define se o texto será itálico ou normal.",
+        "example": "<em style=\"font-style: italic;\">Itálico</em>",
+        "professionalTip": "Use para ênfase, títulos de obras ou termos técnicos.",
+        "variables": [
+          "normal",
+          "italic",
+          "oblique"
+        ]
+      },
+      {
+        "name": "text-align",
+        "label": "Alinhamento do texto",
+        "explanation": "Define o alinhamento do texto (esquerda, centro, direita, justificado).",
+        "example": "<div style=\"text-align: center;\">Texto centralizado</div>",
+        "professionalTip": "Títulos ficam bem centralizados. Parágrafos: alinhamento à esquerda facilita leitura.",
+        "variables": [
+          "left",
+          "right",
+          "center",
+          "justify",
+          "start",
+          "end"
+        ]
+      },
+      {
+        "name": "text-decoration",
+        "label": "Decoração do texto (sublinhado...)",
+        "explanation": "Adiciona linhas sob o texto, sobre ele ou o riscando.",
+        "example": "<span style=\"text-decoration: underline;\">Sublinhado</span>",
+        "professionalTip": "Use underline para links e line-through para indicar valores desatualizados.",
+        "variables": [
+          "none",
+          "underline",
+          "overline",
+          "line-through"
+        ]
+      },
+      {
+        "name": "text-transform",
+        "label": "Transformação do texto",
+        "explanation": "Altera a capitalização: tudo maiúsculo, minúsculo ou capitalizado.",
+        "example": "<span style=\"text-transform: uppercase;\">MAIÚSCULO</span>",
+        "professionalTip": "Use uppercase para botões e títulos chamativos.",
+        "variables": [
+          "none",
+          "uppercase",
+          "lowercase",
+          "capitalize"
+        ]
+      },
+      {
+        "name": "line-height",
+        "label": "Altura da linha",
+        "explanation": "Controla o espaçamento vertical entre linhas de texto.",
+        "example": "<p style=\"line-height: 2;\">Linhas com espaçamento duplo</p>",
+        "professionalTip": "Melhora a leitura em textos longos. Ideal: entre 1.4 e 1.8.",
+        "variables": [
+          "normal",
+          "1.5",
+          "2",
+          "120%"
+        ]
+      },
+      {
+        "name": "letter-spacing",
+        "label": "Espaçamento entre letras",
+        "explanation": "Define o espaço entre os caracteres.",
+        "example": "<span style=\"letter-spacing: 2px;\">E s p a ç a d o</span>",
+        "professionalTip": "Aumenta legibilidade em títulos ou em design minimalista.",
+        "variables": [
+          "normal",
+          "1px",
+          "2px",
+          "0.1em"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,187 @@
+[
+  {
+    "tag": "Tamanho",
+    "description": "Largura, altura e dimensões.",
+    "classes": [
+      {
+        "name": "width",
+        "label": "Largura",
+        "explanation": "Define a largura de um elemento.",
+        "example": "<div style=\"width: 200px;\">Elemento com 200px de largura</div>",
+        "professionalTip": "Muito usado para definir tamanhos fixos de botões, imagens, cards e colunas.",
+        "variables": [
+          "auto",
+          "100px",
+          "50%",
+          "100vw",
+          "fit-content"
+        ]
+      },
+      {
+        "name": "min-width",
+        "label": "Largura mínima",
+        "explanation": "Define a menor largura que o elemento pode ter.",
+        "example": "<div style=\"min-width: 150px;\">Nunca menor que 150px</div>",
+        "professionalTip": "Garante que o conteúdo não quebre ou encolha demais em telas pequenas.",
+        "variables": [
+          "0",
+          "100px",
+          "50%",
+          "min-content"
+        ]
+      },
+      {
+        "name": "max-width",
+        "label": "Largura máxima",
+        "explanation": "Define a maior largura que o elemento pode ter.",
+        "example": "<div style=\"max-width: 600px;\">Nunca maior que 600px</div>",
+        "professionalTip": "Usado para limitar o tamanho de containers e garantir leitura confortável em textos.",
+        "variables": [
+          "none",
+          "100%",
+          "600px",
+          "60ch"
+        ]
+      },
+      {
+        "name": "height",
+        "label": "Altura",
+        "explanation": "Define a altura de um elemento.",
+        "example": "<div style=\"height: 300px;\">Altura fixa de 300px</div>",
+        "professionalTip": "Comum em banners, cards, imagens, e layouts de seção.",
+        "variables": [
+          "auto",
+          "100px",
+          "50vh",
+          "fit-content"
+        ]
+      },
+      {
+        "name": "min-height",
+        "label": "Altura mínima",
+        "explanation": "Define a menor altura que o elemento pode ter.",
+        "example": "<div style=\"min-height: 100px;\">Nunca menor que 100px</div>",
+        "professionalTip": "Garante que caixas com pouco conteúdo mantenham uma altura mínima para layout consistente.",
+        "variables": [
+          "0",
+          "100px",
+          "100vh",
+          "min-content"
+        ]
+      },
+      {
+        "name": "max-height",
+        "label": "Altura máxima",
+        "explanation": "Define a maior altura que o elemento pode ter.",
+        "example": "<div style=\"max-height: 400px;\">Nunca maior que 400px</div>",
+        "professionalTip": "Muito usado com scroll interno em listas e caixas de conteúdo expansível.",
+        "variables": [
+          "none",
+          "400px",
+          "50vh",
+          "max-content"
+        ]
+      },
+      {
+        "name": "box-sizing",
+        "label": "Modelo de caixa",
+        "explanation": "Define como o navegador calcula o tamanho total do elemento (incluindo borda e padding).",
+        "example": "<div style=\"box-sizing: border-box;\">Tamanho inclui bordas e padding</div>",
+        "professionalTip": "Sempre use `border-box` para evitar quebra de layout inesperada ao adicionar padding/borda.",
+        "variables": [
+          "content-box",
+          "border-box",
+          "inherit"
+        ]
+      },
+      {
+        "name": "aspect-ratio",
+        "label": "Proporção",
+        "explanation": "Mantém uma proporção fixa entre largura e altura.",
+        "example": "<div style=\"aspect-ratio: 16 / 9;\">Proporção 16:9</div>",
+        "professionalTip": "Muito usado em vídeos, imagens responsivas e placeholders.",
+        "variables": [
+          "1 / 1",
+          "4 / 3",
+          "16 / 9",
+          "auto"
+        ]
+      },
+      {
+        "name": "inline-size",
+        "label": "Tamanho inline",
+        "explanation": "Define o tamanho na direção inline (horizontal em LTR, vertical em vertical writing).",
+        "example": "<div style=\"inline-size: 300px;\">Largura lógica</div>",
+        "professionalTip": "Melhor opção para layouts internacionais com escrita direita-esquerda (RTL).",
+        "variables": [
+          "auto",
+          "100%",
+          "300px",
+          "max-content"
+        ]
+      },
+      {
+        "name": "block-size",
+        "label": "Tamanho block",
+        "explanation": "Define o tamanho na direção de bloco (vertical em LTR).",
+        "example": "<div style=\"block-size: 200px;\">Altura lógica</div>",
+        "professionalTip": "Perfeito para layouts que precisam funcionar em diferentes orientações de texto.",
+        "variables": [
+          "auto",
+          "100%",
+          "200px",
+          "fit-content"
+        ]
+      },
+      {
+        "name": "min-inline-size",
+        "label": "Tamanho inline mínimo",
+        "explanation": "Define o menor tamanho possível no eixo inline.",
+        "example": "<div style=\"min-inline-size: 150px;\">Largura mínima lógica</div>",
+        "professionalTip": "Evita que caixas se deformem em idiomas com palavras longas.",
+        "variables": [
+          "0",
+          "100px",
+          "min-content",
+          "max-content"
+        ]
+      },
+      {
+        "name": "max-inline-size",
+        "label": "Tamanho inline máximo",
+        "explanation": "Define o maior tamanho possível no eixo inline.",
+        "example": "<div style=\"max-inline-size: 600px;\">Largura máxima lógica</div>",
+        "professionalTip": "Limita a largura de blocos de texto para melhor legibilidade em múltiplos idiomas.",
+        "variables": [
+          "none",
+          "600px",
+          "60ch"
+        ]
+      },
+      {
+        "name": "min-block-size",
+        "label": "Tamanho block mínimo",
+        "explanation": "Define a menor altura possível no eixo de bloco.",
+        "example": "<div style=\"min-block-size: 100px;\">Altura mínima lógica</div>",
+        "professionalTip": "Garante altura mínima mesmo com pouco conteúdo, útil em grids e cards.",
+        "variables": [
+          "0",
+          "100px",
+          "min-content"
+        ]
+      },
+      {
+        "name": "max-block-size",
+        "label": "Tamanho block máximo",
+        "explanation": "Define a maior altura possível no eixo de bloco.",
+        "example": "<div style=\"max-block-size: 300px;\">Altura máxima lógica</div>",
+        "professionalTip": "Controla altura máxima sem usar `height`, ideal para conteúdo dinâmico.",
+        "variables": [
+          "none",
+          "300px",
+          "max-content"
+        ]
+      }
+    ]
+  }
+]

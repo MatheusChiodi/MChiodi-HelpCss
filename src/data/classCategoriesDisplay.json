@@ -1,0 +1,78 @@
+[
+  {
+    "tag": "Display e Layout",
+    "description": "Controla a forma como os elementos são exibidos, posicionados e organizados na tela.",
+    "classes": [
+      {
+        "name": "display",
+        "label": "Tipo de exibição",
+        "explanation": "Define como um elemento será renderizado na tela: como bloco, inline, flexível, grid, etc.",
+        "example": "<div style=\"display: flex;\">Conteúdo</div>",
+        "professionalTip": "Muito usado para estruturar o layout de componentes. 'display: flex' é quase padrão em componentes modernos.",
+        "variables": [
+          "block",
+          "inline",
+          "inline-block",
+          "flex",
+          "grid",
+          "none"
+        ]
+      },
+      {
+        "name": "position",
+        "label": "Posicionamento",
+        "explanation": "Define como o elemento será posicionado dentro da página (estático, relativo, absoluto, etc).",
+        "example": "<div style=\"position: absolute; top: 0; left: 0;\">Fixado no canto</div>",
+        "professionalTip": "Essencial para criar elementos flutuantes, modais, tooltips ou posicionamento customizado.",
+        "variables": [
+          "static",
+          "relative",
+          "absolute",
+          "fixed",
+          "sticky"
+        ]
+      },
+      {
+        "name": "top",
+        "label": "Distância do topo",
+        "explanation": "Define a distância entre o topo do elemento pai e o topo do elemento atual.",
+        "example": "<div style=\"position: absolute; top: 20px;\">Topo a 20px</div>",
+        "professionalTip": "Usado junto com 'position: absolute/fixed' para controlar o posicionamento.",
+        "variables": [
+          "auto",
+          "0",
+          "10px",
+          "50%",
+          "calc(...)"
+        ]
+      },
+      {
+        "name": "z-index",
+        "label": "Ordem de empilhamento",
+        "explanation": "Controla qual elemento fica por cima de outro em sobreposições.",
+        "example": "<div style=\"z-index: 10;\">Fica por cima</div>",
+        "professionalTip": "Usado para resolver conflitos visuais entre modais, menus, overlays, etc.",
+        "variables": [
+          "auto",
+          "0",
+          "1",
+          "10",
+          "9999"
+        ]
+      },
+      {
+        "name": "overflow",
+        "label": "Transbordo",
+        "explanation": "Controla o que acontece quando o conteúdo de um elemento ultrapassa suas bordas.",
+        "example": "<div style=\"overflow: scroll; height: 100px;\">Conteúdo rolável</div>",
+        "professionalTip": "Comum em cards com limite de altura ou áreas de scroll internas.",
+        "variables": [
+          "visible",
+          "hidden",
+          "scroll",
+          "auto"
+        ]
+      }
+    ]
+  }
+]
