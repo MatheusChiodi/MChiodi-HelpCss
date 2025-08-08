@@ -5,8 +5,8 @@ import { Moon, Sun, X } from "lucide-react";
 
 export default function Header() {
   const location = useLocation();
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [showHeader, setShowHeader] = useState(true);
+  const [menuOpen, setMenuOpen] = useState(false); //
+  const [showHeader, setShowHeader] = useState(true); //
 
   useEffect(() => {
     setMenuOpen(false);

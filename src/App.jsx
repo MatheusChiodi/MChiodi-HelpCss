@@ -4,8 +4,8 @@ import { AnimatePresence } from "framer-motion";
 
 import ScrollToTopButton from "./components/layout/ScrollToTopButton";
 import { ScrollToTop } from "./components/layout/ScrollToTop";
-import Header from "./components/layout/Header";
-import Footer from "./components/layout/Footer";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 import Loader from "./components/layout/Loader";
 import PersistentBackground from "./components/layout/PersistentBackground";
 
