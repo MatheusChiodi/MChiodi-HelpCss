@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import classCategoriesBorda from "@/data/classCategoriesBorda.json";
 import classCategoriesDisplay from "@/data/classCategoriesDisplay.json";
 import classCategoriesEspacamento from "@/data/classCategoriesEspacamento.json";
@@ -88,14 +89,18 @@ export default function Study() {
               <p className="mb-4 text-zinc-300">{cat.description}</p>
               <div className="flex flex-wrap gap-3">
                 {cat.classes.map((cls) => (
-                  <a key={cls.name} href={`#${cls.name}`} className="group">
+                  <Link
+                    key={cls.name}
+                    to={`/class-details/${cls.name}`}
+                    className="group"
+                  >
                     <Button className="rounded-lg border border-[#ff5555] bg-zinc-800 px-4 py-2 text-base font-semibold text-[#ff5555] shadow-md transition-all duration-200 group-hover:bg-[#ff5555] group-hover:text-white">
                       <span className="font-mono">{cls.name}</span>{" "}
                       <span className="ml-2 text-xs text-zinc-300">
                         {cls.label}
                       </span>
                     </Button>
-                  </a>
+                  </Link>
                 ))}
               </div>
             </div>

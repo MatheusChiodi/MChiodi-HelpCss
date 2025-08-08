@@ -1,14 +1,14 @@
 [
   {
     "tag": "Espaçamento",
-    "description": "Margin, padding e espaçamentos.",
+    "description": "Controla margens externas, preenchimento interno e espaçamentos entre elementos.",
     "classes": [
       {
         "name": "margin",
         "label": "Margem externa",
-        "explanation": "Cria espaço fora das bordas do elemento, afastando-o de outros elementos.",
-        "example": "<div style=\"margin: 16px;\">Com margem</div>",
-        "professionalTip": "Muito usado para separar seções, botões e componentes entre si.",
+        "explanation": "Cria espaço fora das bordas do elemento, afastando-o de outros.",
+        "example": "<div style='background:#dbeafe; padding:8px;'><div style=\"background:#93c5fd; margin:16px; padding:4px; border:1px solid #2563eb\">Com margem de 16px</div></div>",
+        "professionalTip": "Útil para separar seções, botões e cards.",
         "variables": [
           "0",
           "8px",
@@ -21,8 +21,8 @@
         "name": "margin-top",
         "label": "Margem superior",
         "explanation": "Adiciona espaço acima do elemento.",
-        "example": "<div style=\"margin-top: 24px;\">Espaço em cima</div>",
-        "professionalTip": "Comum para distanciar títulos, imagens ou blocos de texto.",
+        "example": "<div style='background:#dbeafe; padding:8px;'><div style=\"background:#93c5fd; margin-top:24px; padding:4px; border:1px solid #2563eb\">Espaço acima (24px)</div></div>",
+        "professionalTip": "Comum para afastar títulos ou imagens de outros elementos.",
         "variables": [
           "0",
           "1rem",
@@ -34,9 +34,9 @@
       {
         "name": "margin-right",
         "label": "Margem direita",
-        "explanation": "Adiciona espaço à direita do elemento.",
-        "example": "<div style=\"margin-right: 10px;\">Espaço à direita</div>",
-        "professionalTip": "Útil para espaçar ícones, botões ou colunas laterais.",
+        "explanation": "Adiciona espaço à direita.",
+        "example": "<div style='display:flex; background:#dbeafe; padding:8px;'><div style=\"background:#93c5fd; margin-right:20px; padding:4px; border:1px solid #2563eb\">Espaço à direita</div><div style='background:#fcd34d; padding:4px'>Outro item</div></div>",
+        "professionalTip": "Bom para separar ícones ou colunas.",
         "variables": [
           "0",
           "10px",
@@ -47,9 +47,9 @@
       {
         "name": "margin-bottom",
         "label": "Margem inferior",
-        "explanation": "Adiciona espaço abaixo do elemento.",
-        "example": "<div style=\"margin-bottom: 20px;\">Espaço embaixo</div>",
-        "professionalTip": "Muito usado para separar elementos verticalmente em listas, cards ou formulários.",
+        "explanation": "Adiciona espaço abaixo.",
+        "example": "<div style='background:#dbeafe; padding:8px;'><div style=\"background:#93c5fd; margin-bottom:20px; padding:4px; border:1px solid #2563eb\">Espaço abaixo</div><div style='background:#fcd34d; padding:4px'>Elemento abaixo</div></div>",
+        "professionalTip": "Muito usado para separar listas e cards verticalmente.",
         "variables": [
           "0",
           "1rem",
@@ -60,9 +60,9 @@
       {
         "name": "margin-left",
         "label": "Margem esquerda",
-        "explanation": "Adiciona espaço à esquerda do elemento.",
-        "example": "<div style=\"margin-left: 15px;\">Espaço à esquerda</div>",
-        "professionalTip": "Útil em layouts de colunas ou alinhamento com ícones.",
+        "explanation": "Adiciona espaço à esquerda.",
+        "example": "<div style='display:flex; background:#dbeafe; padding:8px;'><div style='background:#fcd34d; padding:4px'>Item</div><div style=\"background:#93c5fd; margin-left:15px; padding:4px; border:1px solid #2563eb\">Espaço à esquerda</div></div>",
+        "professionalTip": "Usado em layouts com colunas ou alinhamento de ícones.",
         "variables": [
           "0",
           "10px",
@@ -73,9 +73,9 @@
       {
         "name": "margin-inline",
         "label": "Margem inline",
-        "explanation": "Define a margem nas direções horizontais (esquerda e direita), respeitando a direção do texto.",
-        "example": "<div style=\"margin-inline: 1rem;\">Margem horizontal</div>",
-        "professionalTip": "Muito útil para interfaces multilíngues com suporte a RTL (Right to Left).",
+        "explanation": "Margem horizontal respeitando a direção do texto (LTR/RTL).",
+        "example": "<div style='background:#dbeafe; padding:8px;'><div style=\"background:#93c5fd; margin-inline:1rem; padding:4px; border:1px solid #2563eb\">Margem horizontal</div></div>",
+        "professionalTip": "Ideal para interfaces multilíngues.",
         "variables": [
           "0",
           "8px",
@@ -85,9 +85,9 @@
       {
         "name": "margin-block",
         "label": "Margem block",
-        "explanation": "Define a margem nas direções verticais (cima e baixo), respeitando o fluxo do conteúdo.",
-        "example": "<div style=\"margin-block: 1rem;\">Margem vertical</div>",
-        "professionalTip": "Útil para espaçamento vertical em componentes reutilizáveis.",
+        "explanation": "Margem vertical respeitando o fluxo do texto.",
+        "example": "<div style='background:#dbeafe; padding:8px;'><div style=\"background:#93c5fd; margin-block:1rem; padding:4px; border:1px solid #2563eb\">Margem vertical</div></div>",
+        "professionalTip": "Garante espaçamento vertical consistente em componentes reutilizáveis.",
         "variables": [
           "0",
           "8px",
@@ -98,9 +98,9 @@
       {
         "name": "padding",
         "label": "Preenchimento interno",
-        "explanation": "Cria espaço interno entre o conteúdo e a borda do elemento.",
-        "example": "<div style=\"padding: 12px;\">Com padding</div>",
-        "professionalTip": "Fundamental para tornar o conteúdo mais legível e criar 'respiro visual'.",
+        "explanation": "Espaço entre o conteúdo e as bordas do elemento.",
+        "example": "<div style=\"background:#93c5fd; padding:16px; border:1px solid #2563eb\">Com padding de 16px</div>",
+        "professionalTip": "Melhora legibilidade e cria 'respiro visual'.",
         "variables": [
           "0",
           "1rem",
@@ -111,9 +111,9 @@
       {
         "name": "padding-top",
         "label": "Preenchimento superior",
-        "explanation": "Adiciona espaço interno acima do conteúdo.",
-        "example": "<div style=\"padding-top: 20px;\">Com espaço acima</div>",
-        "professionalTip": "Útil em cabeçalhos, seções ou ícones dentro de caixas.",
+        "explanation": "Espaço interno acima do conteúdo.",
+        "example": "<div style=\"background:#93c5fd; padding-top:20px; border:1px solid #2563eb\">Padding acima</div>",
+        "professionalTip": "Útil para cabeçalhos e ícones.",
         "variables": [
           "0",
           "1rem",
@@ -123,9 +123,9 @@
       {
         "name": "padding-right",
         "label": "Preenchimento direito",
-        "explanation": "Adiciona espaço interno à direita do conteúdo.",
-        "example": "<div style=\"padding-right: 10px;\">Com espaço à direita</div>",
-        "professionalTip": "Garante que textos ou ícones não fiquem colados à borda.",
+        "explanation": "Espaço interno à direita.",
+        "example": "<div style=\"background:#93c5fd; padding-right:10px; border:1px solid #2563eb\">Padding à direita</div>",
+        "professionalTip": "Evita que texto fique colado na borda.",
         "variables": [
           "0",
           "8px",
@@ -135,9 +135,9 @@
       {
         "name": "padding-bottom",
         "label": "Preenchimento inferior",
-        "explanation": "Adiciona espaço interno abaixo do conteúdo.",
-        "example": "<div style=\"padding-bottom: 16px;\">Com espaço abaixo</div>",
-        "professionalTip": "Importante para botões ou cards que precisam de área clicável extra.",
+        "explanation": "Espaço interno abaixo.",
+        "example": "<div style=\"background:#93c5fd; padding-bottom:16px; border:1px solid #2563eb\">Padding abaixo</div>",
+        "professionalTip": "Bom para aumentar a área clicável de botões.",
         "variables": [
           "0",
           "10px",
@@ -147,9 +147,9 @@
       {
         "name": "padding-left",
         "label": "Preenchimento esquerdo",
-        "explanation": "Adiciona espaço interno à esquerda do conteúdo.",
-        "example": "<div style=\"padding-left: 1rem;\">Espaço à esquerda</div>",
-        "professionalTip": "Muito usado para dar espaçamento entre o conteúdo e o começo de listas, cards ou ícones.",
+        "explanation": "Espaço interno à esquerda.",
+        "example": "<div style=\"background:#93c5fd; padding-left:1rem; border:1px solid #2563eb\">Padding à esquerda</div>",
+        "professionalTip": "Útil para alinhamento de texto ou ícones.",
         "variables": [
           "0",
           "1rem",
@@ -159,9 +159,9 @@
       {
         "name": "padding-inline",
         "label": "Preenchimento inline",
-        "explanation": "Define o preenchimento horizontal (esquerda e direita) conforme a direção do texto.",
-        "example": "<div style=\"padding-inline: 12px;\">Preenchimento horizontal</div>",
-        "professionalTip": "Ideal para manter espaçamento simétrico em componentes com suporte a múltiplos idiomas.",
+        "explanation": "Preenchimento horizontal respeitando LTR/RTL.",
+        "example": "<div style=\"background:#93c5fd; padding-inline:12px; border:1px solid #2563eb\">Padding horizontal</div>",
+        "professionalTip": "Mantém simetria em layouts multilíngues.",
         "variables": [
           "0",
           "8px",
@@ -171,9 +171,9 @@
       {
         "name": "padding-block",
         "label": "Preenchimento block",
-        "explanation": "Define o preenchimento vertical (cima e baixo).",
-        "example": "<div style=\"padding-block: 16px;\">Preenchimento vertical</div>",
-        "professionalTip": "Perfeito para garantir espaçamento consistente entre cabeçalhos e conteúdo.",
+        "explanation": "Preenchimento vertical (cima e baixo).",
+        "example": "<div style=\"background:#93c5fd; padding-block:16px; border:1px solid #2563eb\">Padding vertical</div>",
+        "professionalTip": "Garante altura consistente entre seções.",
         "variables": [
           "0",
           "10px",
@@ -182,10 +182,10 @@
       },
       {
         "name": "gap",
-        "label": "Espaçamento entre itens (flex/grid)",
-        "explanation": "Define o espaço entre elementos dentro de um container flex ou grid.",
-        "example": "<div style=\"display: flex; gap: 16px;\"><div>Item 1</div><div>Item 2</div></div>",
-        "professionalTip": "Substitui o uso de margens individuais em layouts modernos.",
+        "label": "Espaçamento entre itens",
+        "explanation": "Espaço entre elementos em flex ou grid.",
+        "example": "<div style=\"display:flex; gap:16px; background:#dbeafe; padding:8px\"><div style='background:#93c5fd; padding:4px'>Item 1</div><div style='background:#fcd34d; padding:4px'>Item 2</div></div>",
+        "professionalTip": "Substitui margens individuais em layouts modernos.",
         "variables": [
           "0",
           "8px",
@@ -196,9 +196,9 @@
       {
         "name": "row-gap",
         "label": "Espaçamento entre linhas",
-        "explanation": "Controla o espaço vertical entre as linhas em grids ou flex-wrap.",
-        "example": "<div style=\"display: grid; row-gap: 12px;\">...</div>",
-        "professionalTip": "Útil em listas, cards empilhados e layouts responsivos.",
+        "explanation": "Espaço vertical entre linhas em grid/flex-wrap.",
+        "example": "<div style=\"display:grid; row-gap:12px; background:#dbeafe; padding:8px\"><div style='background:#93c5fd'>Linha 1</div><div style='background:#fcd34d'>Linha 2</div></div>",
+        "professionalTip": "Ótimo para listas e cards empilhados.",
         "variables": [
           "0",
           "10px",
@@ -208,9 +208,9 @@
       {
         "name": "column-gap",
         "label": "Espaçamento entre colunas",
-        "explanation": "Controla o espaço horizontal entre as colunas em layouts de grid ou flex.",
-        "example": "<div style=\"display: grid; column-gap: 20px;\">...</div>",
-        "professionalTip": "Fundamental para manter colunas organizadas e com leitura agradável.",
+        "explanation": "Espaço horizontal entre colunas em grid/flex.",
+        "example": "<div style=\"display:grid; grid-template-columns:1fr 1fr; column-gap:20px; background:#dbeafe; padding:8px\"><div style='background:#93c5fd'>Coluna 1</div><div style='background:#fcd34d'>Coluna 2</div></div>",
+        "professionalTip": "Mantém colunas equilibradas e legíveis.",
         "variables": [
           "0",
           "12px",
@@ -219,10 +219,10 @@
       },
       {
         "name": "inset",
-        "label": "Inset (atalho para top/right/bottom/left)",
-        "explanation": "Define a distância entre o elemento posicionado e as bordas do seu pai em todas as direções.",
-        "example": "<div style=\"position: absolute; inset: 10px;\">Posicionado</div>",
-        "professionalTip": "Simplifica o uso de top/right/bottom/left para posicionamento absoluto ou fixo.",
+        "label": "Inset",
+        "explanation": "Atalho para top/right/bottom/left juntos.",
+        "example": "<div style='position:relative; height:80px; background:#dbeafe;'><div style=\"position:absolute; inset:10px; background:#93c5fd; border:1px solid #2563eb\">Inset 10px</div></div>",
+        "professionalTip": "Simplifica posicionamento absoluto ou fixo.",
         "variables": [
           "0",
           "10px",
@@ -233,9 +233,9 @@
       {
         "name": "inset-inline",
         "label": "Inset inline",
-        "explanation": "Controla a distância nas laterais horizontais do elemento (inline-start e inline-end).",
-        "example": "<div style=\"position: absolute; inset-inline: 20px;\">Horizontal</div>",
-        "professionalTip": "Essencial para suportar idiomas que mudam a direção do texto (ex: árabe, hebraico).",
+        "explanation": "Distância horizontal (start/end) do elemento pai.",
+        "example": "<div style='position:relative; height:80px; background:#dbeafe;'><div style=\"position:absolute; inset-inline:20px; top:10px; background:#93c5fd; border:1px solid #2563eb\">Inset horizontal</div></div>",
+        "professionalTip": "Suporta idiomas que mudam direção do texto.",
         "variables": [
           "0",
           "20px",
@@ -245,9 +245,9 @@
       {
         "name": "inset-block",
         "label": "Inset block",
-        "explanation": "Controla a distância nas direções verticais do elemento (top e bottom).",
-        "example": "<div style=\"position: absolute; inset-block: 15px;\">Vertical</div>",
-        "professionalTip": "Permite controle responsivo e adaptável do posicionamento vertical.",
+        "explanation": "Distância vertical (top/bottom) do elemento pai.",
+        "example": "<div style='position:relative; height:80px; background:#dbeafe;'><div style=\"position:absolute; inset-block:15px; left:10px; background:#93c5fd; border:1px solid #2563eb\">Inset vertical</div></div>",
+        "professionalTip": "Controla altura em posicionamento absoluto/fixo.",
         "variables": [
           "0",
           "15px",

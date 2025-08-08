@@ -1,14 +1,14 @@
 [
   {
     "tag": "Display e Layout",
-    "description": "Controla a forma como os elementos são exibidos, posicionados e organizados na tela.",
+    "description": "Controla como os elementos são exibidos, posicionados e organizados na tela.",
     "classes": [
       {
         "name": "display",
         "label": "Tipo de exibição",
-        "explanation": "Define como um elemento será renderizado na tela: como bloco, inline, flexível, grid, etc.",
-        "example": "<div style=\"display: flex;\">Conteúdo</div>",
-        "professionalTip": "Muito usado para estruturar o layout de componentes. 'display: flex' é quase padrão em componentes modernos.",
+        "explanation": "Define como um elemento será renderizado: como bloco, inline, flex, grid, etc.",
+        "example": "<div style=\"display: flex; gap:8px; background:#f3f4f6; padding:8px; border:1px solid #ddd\"><div style='background:#93c5fd; padding:4px'>Item 1</div><div style='background:#fcd34d; padding:4px'>Item 2</div></div>",
+        "professionalTip": "'flex' é o padrão moderno para layout; 'grid' é ótimo para estruturas complexas.",
         "variables": [
           "block",
           "inline",
@@ -19,11 +19,67 @@
         ]
       },
       {
+        "name": "flex-direction",
+        "label": "Direção do flex",
+        "explanation": "Define a direção dos itens dentro de um contêiner flexível.",
+        "example": "<div style=\"display:flex; flex-direction: column; gap:8px; background:#f3f4f6; padding:8px; border:1px solid #ddd\"><div style='background:#93c5fd; padding:4px'>Item 1</div><div style='background:#fcd34d; padding:4px'>Item 2</div></div>",
+        "professionalTip": "Use 'column' para empilhar itens verticalmente, 'row' para lado a lado.",
+        "variables": [
+          "row",
+          "row-reverse",
+          "column",
+          "column-reverse"
+        ]
+      },
+      {
+        "name": "justify-content",
+        "label": "Alinhamento horizontal (flex/grid)",
+        "explanation": "Distribui espaço entre itens no eixo principal.",
+        "example": "<div style=\"display:flex; justify-content: space-around; background:#f3f4f6; padding:8px; border:1px solid #ddd\"><div style='background:#93c5fd; padding:4px'>A</div><div style='background:#fcd34d; padding:4px'>B</div></div>",
+        "professionalTip": "Ótimo para centralizar menus, botões ou distribuir espaço uniformemente.",
+        "variables": [
+          "flex-start",
+          "flex-end",
+          "center",
+          "space-between",
+          "space-around",
+          "space-evenly"
+        ]
+      },
+      {
+        "name": "align-items",
+        "label": "Alinhamento vertical (flex/grid)",
+        "explanation": "Controla o alinhamento dos itens no eixo cruzado.",
+        "example": "<div style=\"display:flex; align-items:center; height:80px; background:#f3f4f6; padding:8px; border:1px solid #ddd\"><div style='background:#93c5fd; padding:4px'>A</div><div style='background:#fcd34d; padding:4px'>B</div></div>",
+        "professionalTip": "Combine com justify-content para alinhamento perfeito no centro.",
+        "variables": [
+          "flex-start",
+          "flex-end",
+          "center",
+          "baseline",
+          "stretch"
+        ]
+      },
+      {
+        "name": "gap",
+        "label": "Espaçamento entre itens",
+        "explanation": "Define o espaço entre elementos em layouts flex ou grid.",
+        "example": "<div style=\"display:flex; gap:16px; background:#f3f4f6; padding:8px; border:1px solid #ddd\"><div style='background:#93c5fd; padding:4px'>1</div><div style='background:#fcd34d; padding:4px'>2</div><div style='background:#86efac; padding:4px'>3</div></div>",
+        "professionalTip": "Evita uso excessivo de margens para separar itens.",
+        "variables": [
+          "4px",
+          "8px",
+          "16px",
+          "24px",
+          "2rem"
+        ]
+      },
+      {
         "name": "position",
         "label": "Posicionamento",
-        "explanation": "Define como o elemento será posicionado dentro da página (estático, relativo, absoluto, etc).",
-        "example": "<div style=\"position: absolute; top: 0; left: 0;\">Fixado no canto</div>",
-        "professionalTip": "Essencial para criar elementos flutuantes, modais, tooltips ou posicionamento customizado.",
+        "explanation": "Define como o elemento será posicionado na página.",
+        "example": "<div style=\"position: relative; height:80px; background:#f3f4f6; border:1px solid #ddd\"><div style='position:absolute; top:8px; right:8px; background:#93c5fd; padding:4px'>Flutuante</div></div>",
+        "professionalTip": "Essencial para criar tooltips, modais e overlays.",
         "variables": [
           "static",
           "relative",
@@ -35,23 +91,23 @@
       {
         "name": "top",
         "label": "Distância do topo",
-        "explanation": "Define a distância entre o topo do elemento pai e o topo do elemento atual.",
-        "example": "<div style=\"position: absolute; top: 20px;\">Topo a 20px</div>",
-        "professionalTip": "Usado junto com 'position: absolute/fixed' para controlar o posicionamento.",
+        "explanation": "Define o espaço entre o topo do elemento pai e o topo do elemento atual.",
+        "example": "<div style=\"position:relative; height:80px; background:#f3f4f6; border:1px solid #ddd\"><div style='position:absolute; top:20px; left:8px; background:#93c5fd; padding:4px'>Topo 20px</div></div>",
+        "professionalTip": "Use com position absolute/fixed para ajustes finos.",
         "variables": [
           "auto",
           "0",
           "10px",
-          "50%",
-          "calc(...)"
+          "20px",
+          "50%"
         ]
       },
       {
         "name": "z-index",
         "label": "Ordem de empilhamento",
-        "explanation": "Controla qual elemento fica por cima de outro em sobreposições.",
-        "example": "<div style=\"z-index: 10;\">Fica por cima</div>",
-        "professionalTip": "Usado para resolver conflitos visuais entre modais, menus, overlays, etc.",
+        "explanation": "Controla qual elemento fica por cima em sobreposição.",
+        "example": "<div style=\"position:relative; background:#f3f4f6; padding:8px; border:1px solid #ddd\"><div style='position:absolute; top:0; left:0; background:#93c5fd; padding:4px; z-index:1'>Topo</div><div style='position:absolute; top:10px; left:10px; background:#fcd34d; padding:4px; z-index:2'>Acima</div></div>",
+        "professionalTip": "Maior valor sobrepõe os menores; útil para menus, modais, overlays.",
         "variables": [
           "auto",
           "0",
@@ -63,14 +119,41 @@
       {
         "name": "overflow",
         "label": "Transbordo",
-        "explanation": "Controla o que acontece quando o conteúdo de um elemento ultrapassa suas bordas.",
-        "example": "<div style=\"overflow: scroll; height: 100px;\">Conteúdo rolável</div>",
-        "professionalTip": "Comum em cards com limite de altura ou áreas de scroll internas.",
+        "explanation": "Controla o que acontece quando o conteúdo ultrapassa os limites do elemento.",
+        "example": "<div style=\"overflow:auto; height:60px; width:150px; border:1px solid #ddd; padding:4px; background:#f3f4f6\">Texto muito longo que vai gerar scroll automático para demonstrar o overflow em ação.</div>",
+        "professionalTip": "Essencial para áreas com muito conteúdo, como tabelas e listas.",
         "variables": [
           "visible",
           "hidden",
           "scroll",
           "auto"
+        ]
+      },
+      {
+        "name": "float",
+        "label": "Flutuação",
+        "explanation": "Faz o elemento flutuar à esquerda ou direita do container.",
+        "example": "<div style=\"border:1px solid #ddd; background:#f3f4f6; padding:4px\"><img src='https://via.placeholder.com/40' style='float:right; margin-left:8px'>Texto que flui ao redor da imagem.</div>",
+        "professionalTip": "Hoje é mais usado para imagens em textos; para layout prefira flex ou grid.",
+        "variables": [
+          "left",
+          "right",
+          "none",
+          "inline-start",
+          "inline-end"
+        ]
+      },
+      {
+        "name": "clear",
+        "label": "Limpar flutuação",
+        "explanation": "Controla o comportamento do elemento em relação a elementos flutuantes anteriores.",
+        "example": "<div style=\"border:1px solid #ddd; background:#f3f4f6; padding:4px\"><div style='float:left; width:40px; height:40px; background:#93c5fd'></div><div style='clear:both; background:#fcd34d'>Este começa abaixo do flutuante</div></div>",
+        "professionalTip": "Evita sobreposição ou fluxo irregular com float.",
+        "variables": [
+          "none",
+          "left",
+          "right",
+          "both"
         ]
       }
     ]

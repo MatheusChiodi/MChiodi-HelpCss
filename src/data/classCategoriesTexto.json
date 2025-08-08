@@ -1,14 +1,14 @@
 [
   {
     "tag": "Texto",
-    "description": "Classes relacionadas à tipografia e cor do texto.",
+    "description": "Controla cor, tamanho, família, estilo, alinhamento e espaçamentos da tipografia.",
     "classes": [
       {
         "name": "color",
         "label": "Cor do texto",
-        "explanation": "Define a cor do texto dentro do elemento. Pode ser nome de cor, hexadecimal, RGB ou HSL.",
-        "example": "<p style=\"color: red;\">Texto vermelho</p>",
-        "professionalTip": "Profissionais usam 'color' para garantir contraste e acessibilidade. Sempre teste em diferentes fundos.",
+        "explanation": "Define a cor usando nomes, hexadecimais, RGB ou HSL.",
+        "example": "<p style=\"color:#ef4444; background:#f3f4f6; padding:4px; border:1px solid #ccc; text-align:center\">Texto vermelho</p>",
+        "professionalTip": "Sempre mantenha contraste mínimo de 4.5:1 com o fundo.",
         "variables": [
           "red",
           "#333",
@@ -20,9 +20,9 @@
       {
         "name": "font-size",
         "label": "Tamanho da fonte",
-        "explanation": "Controla o tamanho das letras. Pode usar px, em, rem e outros.",
-        "example": "<h1 style=\"font-size: 32px;\">Título grande</h1>",
-        "professionalTip": "Prefira unidades relativas como 'rem' para responsividade.",
+        "explanation": "Controla o tamanho do texto usando px, em, rem ou palavras-chave.",
+        "example": "<p style=\"font-size:24px; background:#f3f4f6; padding:4px; border:1px solid #ccc; text-align:center\">Título grande</p>",
+        "professionalTip": "Prefira unidades relativas como rem para responsividade.",
         "variables": [
           "12px",
           "1rem",
@@ -33,9 +33,9 @@
       },
       {
         "name": "font-weight",
-        "label": "Peso da fonte (negrito, normal...)",
-        "explanation": "Define a espessura da fonte, de leve a pesada.",
-        "example": "<span style=\"font-weight: 700;\">Texto negrito</span>",
+        "label": "Peso da fonte",
+        "explanation": "Define a espessura do texto.",
+        "example": "<p style=\"font-weight:700; background:#f3f4f6; padding:4px; border:1px solid #ccc; text-align:center\">Negrito</p>",
         "professionalTip": "Use pesos diferentes para criar hierarquia visual.",
         "variables": [
           "normal",
@@ -49,9 +49,9 @@
       {
         "name": "font-family",
         "label": "Família da fonte",
-        "explanation": "Escolhe o tipo de letra (Arial, Verdana, etc).",
-        "example": "<p style=\"font-family: Arial, sans-serif;\">Texto com Arial</p>",
-        "professionalTip": "Sempre defina fallback com 'sans-serif' ou 'monospace'.",
+        "explanation": "Define o tipo de letra principal e de fallback.",
+        "example": "<p style=\"font-family: Arial, sans-serif; background:#f3f4f6; padding:4px; border:1px solid #ccc; text-align:center\">Arial</p>",
+        "professionalTip": "Sempre forneça uma fonte genérica como fallback.",
         "variables": [
           "Arial",
           "Georgia",
@@ -62,10 +62,10 @@
       },
       {
         "name": "font-style",
-        "label": "Estilo da fonte (itálico...)",
-        "explanation": "Define se o texto será itálico ou normal.",
-        "example": "<em style=\"font-style: italic;\">Itálico</em>",
-        "professionalTip": "Use para ênfase, títulos de obras ou termos técnicos.",
+        "label": "Estilo da fonte",
+        "explanation": "Define se o texto é normal, itálico ou oblíquo.",
+        "example": "<p style=\"font-style:italic; background:#f3f4f6; padding:4px; border:1px solid #ccc; text-align:center\">Itálico</p>",
+        "professionalTip": "Itálico é útil para ênfase ou títulos de obras.",
         "variables": [
           "normal",
           "italic",
@@ -75,9 +75,9 @@
       {
         "name": "text-align",
         "label": "Alinhamento do texto",
-        "explanation": "Define o alinhamento do texto (esquerda, centro, direita, justificado).",
-        "example": "<div style=\"text-align: center;\">Texto centralizado</div>",
-        "professionalTip": "Títulos ficam bem centralizados. Parágrafos: alinhamento à esquerda facilita leitura.",
+        "explanation": "Controla alinhamento horizontal: esquerda, centro, direita ou justificado.",
+        "example": "<div style=\"text-align:center; background:#f3f4f6; padding:4px; border:1px solid #ccc\">Centralizado</div>",
+        "professionalTip": "Centralize títulos, alinhe parágrafos à esquerda para melhor leitura.",
         "variables": [
           "left",
           "right",
@@ -89,10 +89,10 @@
       },
       {
         "name": "text-decoration",
-        "label": "Decoração do texto (sublinhado...)",
-        "explanation": "Adiciona linhas sob o texto, sobre ele ou o riscando.",
-        "example": "<span style=\"text-decoration: underline;\">Sublinhado</span>",
-        "professionalTip": "Use underline para links e line-through para indicar valores desatualizados.",
+        "label": "Decoração do texto",
+        "explanation": "Adiciona linhas sob, sobre ou atravessando o texto.",
+        "example": "<p style=\"text-decoration:underline; background:#f3f4f6; padding:4px; border:1px solid #ccc; text-align:center\">Sublinhado</p>",
+        "professionalTip": "Underline para links; line-through para valores antigos.",
         "variables": [
           "none",
           "underline",
@@ -102,10 +102,10 @@
       },
       {
         "name": "text-transform",
-        "label": "Transformação do texto",
-        "explanation": "Altera a capitalização: tudo maiúsculo, minúsculo ou capitalizado.",
-        "example": "<span style=\"text-transform: uppercase;\">MAIÚSCULO</span>",
-        "professionalTip": "Use uppercase para botões e títulos chamativos.",
+        "label": "Transformação de texto",
+        "explanation": "Altera capitalização: tudo maiúsculo, minúsculo ou capitalizado.",
+        "example": "<p style=\"text-transform:uppercase; background:#f3f4f6; padding:4px; border:1px solid #ccc; text-align:center\">MAIÚSCULO</p>",
+        "professionalTip": "Uppercase em botões e títulos; capitalize para nomes próprios.",
         "variables": [
           "none",
           "uppercase",
@@ -116,9 +116,9 @@
       {
         "name": "line-height",
         "label": "Altura da linha",
-        "explanation": "Controla o espaçamento vertical entre linhas de texto.",
-        "example": "<p style=\"line-height: 2;\">Linhas com espaçamento duplo</p>",
-        "professionalTip": "Melhora a leitura em textos longos. Ideal: entre 1.4 e 1.8.",
+        "explanation": "Controla o espaço vertical entre linhas.",
+        "example": "<p style=\"line-height:2; background:#f3f4f6; padding:4px; border:1px solid #ccc\">Texto<br>com espaçamento duplo</p>",
+        "professionalTip": "Para textos longos, use entre 1.4 e 1.8 para melhor leitura.",
         "variables": [
           "normal",
           "1.5",
@@ -129,14 +129,64 @@
       {
         "name": "letter-spacing",
         "label": "Espaçamento entre letras",
-        "explanation": "Define o espaço entre os caracteres.",
-        "example": "<span style=\"letter-spacing: 2px;\">E s p a ç a d o</span>",
-        "professionalTip": "Aumenta legibilidade em títulos ou em design minimalista.",
+        "explanation": "Ajusta a distância horizontal entre caracteres.",
+        "example": "<p style=\"letter-spacing:2px; background:#f3f4f6; padding:4px; border:1px solid #ccc; text-align:center\">E s p a ç a d o</p>",
+        "professionalTip": "Aumente em títulos para impacto visual, diminua em textos densos para economia de espaço.",
         "variables": [
           "normal",
           "1px",
           "2px",
           "0.1em"
+        ]
+      },
+      {
+        "name": "word-spacing",
+        "label": "Espaçamento entre palavras",
+        "explanation": "Define o espaço entre palavras.",
+        "example": "<p style=\"word-spacing:8px; background:#f3f4f6; padding:4px; border:1px solid #ccc; text-align:center\">Mais espaço entre palavras</p>",
+        "professionalTip": "Pode melhorar a legibilidade em títulos grandes.",
+        "variables": [
+          "normal",
+          "4px",
+          "8px",
+          "1em"
+        ]
+      },
+      {
+        "name": "white-space",
+        "label": "Tratamento de espaços e quebras",
+        "explanation": "Controla como o texto lida com espaços e quebras de linha.",
+        "example": "<p style=\"white-space:nowrap; background:#f3f4f6; padding:4px; border:1px solid #ccc; width:200px; overflow:hidden; text-overflow:ellipsis\">Texto muito longo que será cortado</p>",
+        "professionalTip": "`nowrap` para manter texto em uma linha; `pre` preserva espaços.",
+        "variables": [
+          "normal",
+          "nowrap",
+          "pre",
+          "pre-wrap",
+          "pre-line"
+        ]
+      },
+      {
+        "name": "text-overflow",
+        "label": "Corte visual do texto",
+        "explanation": "Define como mostrar texto que ultrapassa os limites.",
+        "example": "<p style=\"white-space:nowrap; overflow:hidden; text-overflow:ellipsis; background:#f3f4f6; padding:4px; border:1px solid #ccc; width:200px\">Texto muito longo...</p>",
+        "professionalTip": "Use com `overflow:hidden` e `white-space:nowrap` para cortar e indicar com reticências.",
+        "variables": [
+          "clip",
+          "ellipsis"
+        ]
+      },
+      {
+        "name": "direction",
+        "label": "Direção do texto",
+        "explanation": "Define se o texto flui da esquerda para direita (LTR) ou o inverso (RTL).",
+        "example": "<p style=\"direction:rtl; background:#f3f4f6; padding:4px; border:1px solid #ccc\">Texto invertido</p>",
+        "professionalTip": "Essencial para suportar idiomas como árabe e hebraico.",
+        "variables": [
+          "ltr",
+          "rtl",
+          "inherit"
         ]
       }
     ]

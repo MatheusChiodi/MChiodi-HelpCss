@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 /* ===== Scrollbar Customizada ===== */
 ::-webkit-scrollbar {
   width: 8px;

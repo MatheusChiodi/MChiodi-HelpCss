@@ -6,39 +6,40 @@
       {
         "name": "border",
         "label": "Borda",
-        "explanation": "Ativa a borda de um elemento com o estilo, cor e largura padrão.",
-        "example": "<div style=\"border: 1px solid black;\">Borda simples</div>",
-        "professionalTip": "Usado para destacar elementos como botões, caixas de mensagem e containers.",
+        "explanation": "Ativa a borda de um elemento (largura, estilo e cor).",
+        "example": "<div style=\"border: 1px solid #111; background:#f9fafb; padding:12px; border-radius:8px\">Borda simples e visível</div>",
+        "professionalTip": "Use bordas sutis (1px) para separar seções sem poluir o layout.",
         "variables": [
           "none",
-          "1px solid black",
-          "2px dashed red",
-          "inherit"
+          "1px solid #111",
+          "2px dashed #ff5555",
+          "3px dotted #2563eb"
         ]
       },
       {
         "name": "border-width",
         "label": "Largura da borda",
-        "explanation": "Define a espessura da borda.",
-        "example": "<div style=\"border-width: 4px; border-style: solid;\">Borda grossa</div>",
-        "professionalTip": "Ideal para dar mais presença visual a elementos como cards ou botões importantes.",
+        "explanation": "Controla a espessura da borda.",
+        "example": "<div style=\"border-style: solid; border-color:#111; border-width: 4px; background:#f9fafb; padding:12px; border-radius:8px\">Borda com 4px</div>",
+        "professionalTip": "Destaque elementos importantes com 2–4px, mas evite exageros.",
         "variables": [
+          "1px",
+          "2px",
+          "4px",
+          "8px",
           "thin",
           "medium",
           "thick",
-          "1px",
-          "4px",
           "0"
         ]
       },
       {
         "name": "border-style",
         "label": "Estilo da borda",
-        "explanation": "Define o tipo visual da borda: contínua, tracejada, pontilhada, etc.",
-        "example": "<div style=\"border: 2px dashed blue;\">Borda tracejada</div>",
-        "professionalTip": "Útil para diferenciar visualmente elementos, como alertas ou seleções.",
+        "explanation": "Define o tipo de linha (sólida, tracejada, pontilhada…).",
+        "example": "<div style=\"border-width:2px; border-style:dashed; border-color:#2563eb; background:#eef2ff; padding:12px; border-radius:8px\">Borda tracejada</div>",
+        "professionalTip": "Tracejado/pontilhado comunicam ‘área temporária’ ou ‘destacado’.",
         "variables": [
-          "none",
           "solid",
           "dashed",
           "dotted",
@@ -46,171 +47,183 @@
           "groove",
           "ridge",
           "inset",
-          "outset"
+          "outset",
+          "none"
         ]
       },
       {
         "name": "border-color",
         "label": "Cor da borda",
-        "explanation": "Define a cor da borda do elemento.",
-        "example": "<div style=\"border: 1px solid red;\">Borda vermelha</div>",
-        "professionalTip": "Use com cores da paleta do projeto para reforçar identidade visual.",
+        "explanation": "Define a cor da borda (requer largura/estilo).",
+        "example": "<div style=\"border: 2px solid #ef4444; background:#fff1f2; padding:12px; border-radius:8px\">Borda vermelha</div>",
+        "professionalTip": "Use cores da paleta do projeto para consistência visual.",
         "variables": [
-          "red",
-          "#00f",
-          "rgb(0,0,0)",
-          "transparent",
-          "inherit"
+          "#111111",
+          "#ef4444",
+          "#2563eb",
+          "#10b981",
+          "transparent"
         ]
       },
       {
         "name": "border-radius",
         "label": "Raio da borda",
-        "explanation": "Define o arredondamento dos cantos da borda.",
-        "example": "<div style=\"border-radius: 8px;\">Cantinhos arredondados</div>",
-        "professionalTip": "Muito usado para botões, cartões e componentes modernos com aparência suave.",
+        "explanation": "Arredonda os cantos do elemento.",
+        "example": "<div style=\"border:1px solid #e5e7eb; border-radius: 12px; background:#f9fafb; padding:12px\">Cantos arredondados (12px)</div>",
+        "professionalTip": "8–12px costumam parecer modernos; 9999px cria pílulas/círculos.",
         "variables": [
           "0",
           "4px",
           "8px",
-          "50%",
-          "1rem"
+          "12px",
+          "24px",
+          "9999px",
+          "50%"
         ]
       },
       {
         "name": "border-top",
         "label": "Borda superior",
-        "explanation": "Aplica borda somente na parte superior do elemento.",
-        "example": "<div style=\"border-top: 2px solid green;\">Borda só no topo</div>",
-        "professionalTip": "Comum em separadores ou para destacar a parte de cima de um bloco de conteúdo.",
+        "explanation": "Aplica borda somente no topo.",
+        "example": "<div style=\"border-top: 3px solid #10b981; background:#ecfeff; padding:12px\">Linha apenas no topo</div>",
+        "professionalTip": "Ótimo como ‘marcador’ de seção ou card ativo.",
         "variables": [
           "none",
-          "2px solid #000",
-          "1px dashed red"
+          "1px solid #111",
+          "2px dashed #f97316",
+          "3px solid #10b981"
         ]
       },
       {
         "name": "border-right",
         "label": "Borda direita",
-        "explanation": "Aplica borda apenas no lado direito do elemento.",
-        "example": "<div style=\"border-right: 3px solid gray;\">Borda direita</div>",
-        "professionalTip": "Útil em tabelas, menus laterais e layouts com colunas.",
+        "explanation": "Aplica borda no lado direito.",
+        "example": "<div style=\"border-right: 4px solid #9ca3af; background:#f3f4f6; padding:12px\">Linha à direita</div>",
+        "professionalTip": "Bom para separar colunas ou menus laterais.",
         "variables": [
           "none",
-          "3px dotted blue",
-          "inherit"
+          "2px dotted #2563eb",
+          "3px solid #9ca3af",
+          "4px dashed #ff5555"
         ]
       },
       {
         "name": "border-bottom",
         "label": "Borda inferior",
-        "explanation": "Aplica borda na parte inferior do elemento.",
-        "example": "<div style=\"border-bottom: 2px solid orange;\">Linha embaixo</div>",
-        "professionalTip": "Muito usado para criar sublinhados estilizados em títulos ou menus.",
+        "explanation": "Aplica borda na parte de baixo.",
+        "example": "<div style=\"border-bottom: 2px solid #f59e0b; background:#fffbeb; padding:12px\">Sublinhado de seção</div>",
+        "professionalTip": "Muito usado em navegação/tab ativa e títulos.",
         "variables": [
           "none",
-          "2px solid",
-          "1px dotted"
+          "1px solid #111",
+          "2px solid #f59e0b",
+          "2px dotted #2563eb"
         ]
       },
       {
         "name": "border-left",
         "label": "Borda esquerda",
-        "explanation": "Aplica borda apenas no lado esquerdo do elemento.",
-        "example": "<div style=\"border-left: 4px solid #ccc;\">Borda esquerda</div>",
-        "professionalTip": "Usado para destacar blocos de citação ou seções laterais.",
+        "explanation": "Aplica borda no lado esquerdo.",
+        "example": "<div style=\"border-left: 4px solid #6b7280; background:#f3f4f6; padding:12px\">Destaque lateral (citação)</div>",
+        "professionalTip": "Perfeito para blocos de citação e notas.",
         "variables": [
           "none",
-          "4px solid gray",
-          "2px dashed"
+          "3px solid #6b7280",
+          "4px dashed #2563eb",
+          "6px solid #ff5555"
         ]
       },
       {
         "name": "box-shadow",
         "label": "Sombra da caixa",
-        "explanation": "Adiciona uma sombra ao redor do elemento.",
-        "example": "<div style=\"box-shadow: 2px 4px 8px rgba(0,0,0,0.2);\">Com sombra</div>",
-        "professionalTip": "Excelente para destacar elementos em layouts modernos com profundidade.",
+        "explanation": "Cria profundidade e separa o elemento do fundo.",
+        "example": "<div style=\"box-shadow: 0 4px 12px rgba(0,0,0,0.15); background:#ffffff; padding:16px; border-radius:12px\">Card com sombra suave</div>",
+        "professionalTip": "Prefira sombras suaves e difusas para um look moderno.",
         "variables": [
           "none",
-          "0 2px 4px #000",
-          "inset 0 0 10px #aaa"
+          "0 2px 4px rgba(0,0,0,0.12)",
+          "0 6px 16px rgba(0,0,0,0.18)",
+          "inset 0 0 10px rgba(0,0,0,0.2)"
         ]
       },
       {
         "name": "outline",
-        "label": "Contorno",
-        "explanation": "Aplica um contorno fora da borda do elemento (não afeta o layout).",
-        "example": "<div style=\"outline: 2px solid blue;\">Contorno azul</div>",
-        "professionalTip": "Comum em acessibilidade para indicar foco de elementos interativos.",
+        "label": "Contorno (fora da caixa)",
+        "explanation": "Traça um contorno externo que não desloca o layout.",
+        "example": "<button style=\"outline: 2px solid #2563eb; background:#111; color:#fff; padding:10px 14px; border:0; border-radius:8px\">Foco visível</button>",
+        "professionalTip": "Fundamental para acessibilidade ao indicar foco.",
         "variables": [
           "none",
-          "1px solid",
-          "2px dotted red"
+          "2px solid #2563eb",
+          "2px dashed #ef4444",
+          "3px solid #10b981"
         ]
       },
       {
         "name": "outline-color",
         "label": "Cor do contorno",
-        "explanation": "Define a cor do contorno (outline).",
-        "example": "<div style=\"outline: 2px solid; outline-color: green;\">Contorno verde</div>",
-        "professionalTip": "Personalize a aparência de foco sem alterar a estrutura do layout.",
+        "explanation": "Define a cor do contorno (requer estilo/largura).",
+        "example": "<button style=\"outline-style: solid; outline-width:2px; outline-color:#10b981; background:#111; color:#fff; padding:10px 14px; border:0; border-radius:8px\">Contorno verde</button>",
+        "professionalTip": "Use alto contraste para estados de foco.",
         "variables": [
-          "blue",
-          "#ff0",
-          "inherit"
+          "#2563eb",
+          "#10b981",
+          "#ef4444",
+          "#f59e0b"
         ]
       },
       {
         "name": "outline-style",
         "label": "Estilo do contorno",
-        "explanation": "Controla o estilo da linha de contorno (semelhante à borda).",
-        "example": "<div style=\"outline: 2px dashed red;\">Contorno tracejado</div>",
-        "professionalTip": "Use com sabedoria para manter contraste acessível em elementos focados.",
+        "explanation": "Define o tipo de linha do contorno.",
+        "example": "<button style=\"outline-width:2px; outline-style:dashed; outline-color:#ef4444; background:#111; color:#fff; padding:10px 14px; border:0; border-radius:8px\">Contorno tracejado</button>",
+        "professionalTip": "Dash/ponto deixam o foco ainda mais evidente.",
         "variables": [
-          "none",
           "solid",
+          "dashed",
           "dotted",
-          "dashed"
+          "none"
         ]
       },
       {
         "name": "outline-width",
         "label": "Largura do contorno",
-        "explanation": "Define a espessura da linha de contorno.",
-        "example": "<div style=\"outline: solid; outline-width: 4px;\">Contorno espesso</div>",
-        "professionalTip": "Permite reforçar o destaque visual em elementos de formulário, por exemplo.",
+        "explanation": "Controla a espessura do contorno.",
+        "example": "<button style=\"outline-style: solid; outline-width:4px; outline-color:#2563eb; background:#111; color:#fff; padding:10px 14px; border:0; border-radius:8px\">Contorno espesso (4px)</button>",
+        "professionalTip": "Ajuste conforme a importância do estado de foco.",
         "variables": [
+          "1px",
+          "2px",
+          "3px",
+          "4px",
           "thin",
           "medium",
-          "thick",
-          "1px",
-          "4px"
+          "thick"
         ]
       },
       {
         "name": "border-collapse",
         "label": "Colapso da borda (tabela)",
-        "explanation": "Controla se as bordas das células da tabela devem se fundir ou permanecer separadas.",
-        "example": "<table style=\"border-collapse: collapse;\">...</table>",
-        "professionalTip": "Quase sempre usado para melhorar a aparência de tabelas HTML.",
+        "explanation": "Une bordas de células (collapse) ou mantém separadas (separate).",
+        "example": "<table style=\"border-collapse: collapse; width:100%\"><tr><td style=\"border:1px solid #111; padding:8px\">A</td><td style=\"border:1px solid #111; padding:8px\">B</td></tr></table>",
+        "professionalTip": "Em tabelas, ‘collapse’ costuma deixar mais limpo.",
         "variables": [
           "collapse",
-          "separate",
-          "inherit"
+          "separate"
         ]
       },
       {
         "name": "border-spacing",
-        "label": "Espaçamento da borda (tabela)",
-        "explanation": "Define o espaçamento entre as bordas das células quando 'border-collapse' é 'separate'.",
-        "example": "<table style=\"border-spacing: 10px;\">...</table>",
-        "professionalTip": "Permite maior controle estético em tabelas com bordas separadas.",
+        "label": "Espaçamento das bordas (tabela)",
+        "explanation": "Define o espaço entre células quando as bordas não colapsam.",
+        "example": "<table style=\"border-collapse: separate; border-spacing: 10px; background:#f9fafb\"><tr><td style=\"border:1px solid #111; padding:8px\">A</td><td style=\"border:1px solid #111; padding:8px\">B</td></tr></table>",
+        "professionalTip": "Use com ‘separate’ para dar respiro entre células.",
         "variables": [
           "0",
           "4px",
+          "8px",
           "10px",
-          "1em"
+          "1rem"
         ]
       }
     ]

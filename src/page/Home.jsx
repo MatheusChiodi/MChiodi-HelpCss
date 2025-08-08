@@ -60,7 +60,7 @@ export default function Home() {
           transition={{ delay: 0.6, duration: 0.6 }}
           className="relative z-10 mt-8 flex flex-col items-center justify-center gap-4 pb-12 sm:flex-row"
         >
-          <Link to="/estude">
+          <Link to="/study">
             <Button
               whileHover={{ scale: 1.08, boxShadow: "0 0 24px #ff5555" }}
               whileTap={{ scale: 0.95 }}

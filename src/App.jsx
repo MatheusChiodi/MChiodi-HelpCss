@@ -11,6 +11,7 @@ import PersistentBackground from "@/components/layout/PersistentBackground";
 
 import Home from "@/page/Home";
 import Study from "@/page/Study";
+import ClassDetails from "./page/ClassDetails";
 import NotFoundPage from "@/page/NotFoundPage";
 
 import "@/index.css";
@@ -49,6 +50,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/study" element={<Study />} />
+            <Route path="/class-details/:className" element={<ClassDetails />} />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </AnimatePresence>

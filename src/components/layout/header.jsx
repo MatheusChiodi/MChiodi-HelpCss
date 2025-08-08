@@ -14,7 +14,6 @@ export default function Header() {
 
   const navLinks = [
     { name: "Home", path: "/" },
-
     { name: "Estude", path: "/study" },
   ];
 

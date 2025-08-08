@@ -1,14 +1,14 @@
 [
   {
     "tag": "Fundo",
-    "description": "Classes para cor, imagem e gradiente de fundo.",
+    "description": "Controla cores, imagens, gradientes, posicionamento e efeitos no fundo dos elementos.",
     "classes": [
       {
         "name": "background-color",
         "label": "Cor de fundo",
-        "explanation": "Define a cor de fundo de um elemento. Pode ser nome de cor, hexadecimal, rgb, etc.",
-        "example": "<div style=\"background-color: yellow;\">Fundo amarelo</div>",
-        "professionalTip": "Muito usado para destacar seções, botões ou alertas. Em projetos profissionais, escolha cores que combinem com a identidade visual e mantenha contraste com o texto.",
+        "explanation": "Define a cor do fundo usando nomes, hexadecimais, rgb, hsl ou transparent.",
+        "example": "<div style=\"background-color:#fde047; color:#111; width:240px; height:80px; border:1px solid #ccc; display:flex; align-items:center; justify-content:center\">Fundo amarelo</div>",
+        "professionalTip": "Escolha cores que mantenham contraste adequado com o texto para acessibilidade.",
         "variables": [
           "red",
           "#f0f0f0",
@@ -20,22 +20,20 @@
       {
         "name": "background-image",
         "label": "Imagem de fundo",
-        "explanation": "Coloca uma imagem como fundo do elemento.",
-        "example": "<div style=\"background-image: url('fundo.jpg');\">Com imagem</div>",
-        "professionalTip": "Usado para banners, seções decorativas ou marcas d'água. Otimize imagens para não deixar o site lento.",
+        "explanation": "Define uma imagem como plano de fundo do elemento.",
+        "example": "<div style=\"background-image:url('https://via.placeholder.com/240x80'); background-size:cover; width:240px; height:80px; border:1px solid #ccc; display:flex; align-items:center; justify-content:center; color:#fff\">Imagem de fundo</div>",
+        "professionalTip": "Otimize imagens para não comprometer desempenho.",
         "variables": [
           "url('imagem.jpg')",
-          "none",
-          "linear-gradient(...)",
-          "repeating-linear-gradient(...)"
+          "none"
         ]
       },
       {
         "name": "background-size",
         "label": "Tamanho do fundo",
-        "explanation": "Controla o tamanho da imagem de fundo.",
-        "example": "<div style=\"background-size: cover;\">Cobre tudo</div>",
-        "professionalTip": "'cover' é muito usado para banners responsivos. 'contain' garante que a imagem inteira apareça.",
+        "explanation": "Controla como a imagem de fundo é dimensionada.",
+        "example": "<div style=\"background-image:url('https://via.placeholder.com/100x100'); background-size:contain; background-repeat:no-repeat; background-position:center; width:240px; height:80px; border:1px solid #ccc; display:flex; align-items:center; justify-content:center\">Contain</div>",
+        "professionalTip": "'cover' para preencher, 'contain' para mostrar inteira sem cortar.",
         "variables": [
           "auto",
           "cover",
@@ -47,9 +45,9 @@
       {
         "name": "background-position",
         "label": "Posição do fundo",
-        "explanation": "Define onde a imagem de fundo aparece (ex: center, top, left).",
-        "example": "<div style=\"background-position: center;\">Centralizado</div>",
-        "professionalTip": "Ajuste para alinhar logotipos ou detalhes importantes da imagem.",
+        "explanation": "Alinha a imagem de fundo no elemento.",
+        "example": "<div style=\"background-image:url('https://via.placeholder.com/240x80/2563eb/fff'); background-position:center; background-repeat:no-repeat; width:240px; height:80px; border:1px solid #ccc; display:flex; align-items:center; justify-content:center; color:#fff\">Centralizado</div>",
+        "professionalTip": "Centralize ou alinhe detalhes importantes da imagem.",
         "variables": [
           "top",
           "center",
@@ -62,9 +60,9 @@
       {
         "name": "background-repeat",
         "label": "Repetição do fundo",
-        "explanation": "Controla se a imagem de fundo se repete.",
-        "example": "<div style=\"background-repeat: no-repeat;\">Sem repetir</div>",
-        "professionalTip": "Use 'no-repeat' para banners e 'repeat' para texturas.",
+        "explanation": "Define se a imagem repete no eixo X/Y.",
+        "example": "<div style=\"background-image:url('https://via.placeholder.com/40'); background-repeat:repeat-x; width:240px; height:80px; border:1px solid #ccc\"></div>",
+        "professionalTip": "No-repeat para banners, repeat para padrões/texturas.",
         "variables": [
           "repeat",
           "no-repeat",
@@ -77,9 +75,9 @@
       {
         "name": "background-attachment",
         "label": "Anexo do fundo",
-        "explanation": "Define se o fundo rola junto com a página (scroll) ou fica fixo (fixed).",
-        "example": "<div style=\"background-attachment: fixed;\">Fundo fixo</div>",
-        "professionalTip": "'fixed' cria efeito parallax, muito usado em landing pages.",
+        "explanation": "Controla se o fundo rola com a página ou fica fixo.",
+        "example": "<div style=\"background-image:url('https://via.placeholder.com/240x80/16a34a/fff'); background-attachment:fixed; background-size:cover; width:240px; height:80px; border:1px solid #ccc; display:flex; align-items:center; justify-content:center; color:#fff\">Fixo</div>",
+        "professionalTip": "'fixed' cria efeito parallax; cuidado com performance mobile.",
         "variables": [
           "scroll",
           "fixed",
@@ -88,10 +86,10 @@
       },
       {
         "name": "background-clip",
-        "label": "Clip do fundo",
-        "explanation": "Controla até onde o fundo se estende.",
-        "example": "<div style=\"background-clip: padding-box;\">Clip no padding</div>",
-        "professionalTip": "Ajuste para efeitos visuais avançados em botões e cards.",
+        "label": "Área do fundo",
+        "explanation": "Define até onde o fundo se estende (borda, padding ou conteúdo).",
+        "example": "<div style=\"background-color:#fca5a5; background-clip:content-box; border:8px dashed #ef4444; padding:16px; width:240px; height:80px; box-sizing:border-box\">Clip no conteúdo</div>",
+        "professionalTip": "Use para efeitos decorativos com bordas largas.",
         "variables": [
           "border-box",
           "padding-box",
@@ -102,9 +100,9 @@
       {
         "name": "background-origin",
         "label": "Origem do fundo",
-        "explanation": "Define de onde o fundo começa.",
-        "example": "<div style=\"background-origin: content-box;\">Começa no conteúdo</div>",
-        "professionalTip": "Pouco usado, mas útil para detalhes em componentes personalizados.",
+        "explanation": "Controla de onde começa o fundo em relação à caixa do elemento.",
+        "example": "<div style=\"background-image:url('https://via.placeholder.com/40'); background-repeat:no-repeat; background-origin:content-box; border:8px solid #ccc; padding:16px; width:240px; height:80px; box-sizing:border-box\">Origem no conteúdo</div>",
+        "professionalTip": "Combinado com clip, dá efeitos refinados.",
         "variables": [
           "border-box",
           "padding-box",
@@ -113,10 +111,10 @@
       },
       {
         "name": "background-blend-mode",
-        "label": "Modo de mesclagem do fundo",
-        "explanation": "Mistura a imagem de fundo com a cor de fundo.",
-        "example": "<div style=\"background-blend-mode: multiply;\">Mistura</div>",
-        "professionalTip": "Usado para criar efeitos visuais modernos em banners e cards.",
+        "label": "Mesclagem do fundo",
+        "explanation": "Mistura cor de fundo e imagem com modos de blend.",
+        "example": "<div style=\"background-image:url('https://via.placeholder.com/240x80'); background-color:#f87171; background-blend-mode:multiply; background-size:cover; width:240px; height:80px; border:1px solid #ccc; display:flex; align-items:center; justify-content:center; color:#fff\">Multiply</div>",
+        "professionalTip": "Cria efeitos modernos e mantém legibilidade.",
         "variables": [
           "normal",
           "multiply",
@@ -131,22 +129,22 @@
       {
         "name": "background",
         "label": "Atalho para fundo",
-        "explanation": "Permite definir várias propriedades de fundo em uma linha só.",
-        "example": "<div style=\"background: url('img.jpg') no-repeat center/cover yellow;\">Tudo junto</div>",
-        "professionalTip": "Muito usado para simplificar o CSS e deixar o código mais limpo.",
+        "explanation": "Permite definir cor, imagem, posição e tamanho em uma só declaração.",
+        "example": "<div style=\"background:url('https://via.placeholder.com/240x80') no-repeat center/cover #fde047; width:240px; height:80px; border:1px solid #ccc; display:flex; align-items:center; justify-content:center\">Tudo junto</div>",
+        "professionalTip": "Simplifica CSS mas pode dificultar manutenções se usado em excesso.",
         "variables": [
           "none",
           "url()",
           "no-repeat center/cover",
-          "linear-gradient(...)"
+          "linear-gradient(to right, red, yellow)"
         ]
       },
       {
-        "name": "background-filter",
-        "label": "Filtro de fundo (blur, etc)",
-        "explanation": "Aplica efeitos como desfoque (blur) ao fundo.",
-        "example": "<div style=\"backdrop-filter: blur(8px);\">Fundo desfocado</div>",
-        "professionalTip": "Usado em modais, menus e overlays para dar destaque ao conteúdo.",
+        "name": "backdrop-filter",
+        "label": "Filtro de fundo",
+        "explanation": "Aplica efeitos (blur, contraste, brilho) no que está atrás do elemento.",
+        "example": "<div style=\"backdrop-filter:blur(6px); background-color:rgba(255,255,255,0.5); width:240px; height:80px; border:1px solid #ccc; display:flex; align-items:center; justify-content:center\">Desfocado</div>",
+        "professionalTip": "Muito usado em menus e modais translúcidos.",
         "variables": [
           "blur(4px)",
           "grayscale(50%)",
@@ -155,11 +153,11 @@
         ]
       },
       {
-        "name": "background-opacity",
+        "name": "opacity",
         "label": "Opacidade do fundo",
-        "explanation": "Controla a transparência do fundo.",
-        "example": "<div style=\"background-color: rgba(255,0,0,0.5);\">Fundo transparente</div>",
-        "professionalTip": "Útil para sobreposições e efeitos de destaque sem esconder o fundo.",
+        "explanation": "Controla a transparência do elemento (afeta conteúdo e fundo).",
+        "example": "<div style=\"background-color:red; opacity:0.5; width:240px; height:80px; border:1px solid #ccc; display:flex; align-items:center; justify-content:center\">50% opaco</div>",
+        "professionalTip": "Use RGBA ou HSLA se quiser transparência apenas no fundo.",
         "variables": [
           "0",
           "0.25",
@@ -171,21 +169,21 @@
       {
         "name": "background-gradient",
         "label": "Gradiente de fundo",
-        "explanation": "Cria uma transição suave entre duas ou mais cores.",
-        "example": "<div style=\"background: linear-gradient(to right, red, yellow);\">Gradiente</div>",
-        "professionalTip": "Muito usado em botões, banners e áreas de destaque para dar um visual moderno.",
+        "explanation": "Transição suave entre cores no fundo.",
+        "example": "<div style=\"background:linear-gradient(to right, red, yellow); width:240px; height:80px; border:1px solid #ccc; display:flex; align-items:center; justify-content:center\">Gradiente</div>",
+        "professionalTip": "Cria visuais modernos para botões e banners.",
         "variables": [
-          "linear-gradient(...)",
-          "radial-gradient(...)",
-          "repeating-linear-gradient(...)"
+          "linear-gradient(to right, red, yellow)",
+          "radial-gradient(circle, red, yellow)",
+          "repeating-linear-gradient(45deg, red, yellow)"
         ]
       },
       {
         "name": "background-position-x",
-        "label": "Posição horizontal do fundo",
-        "explanation": "Controla a posição horizontal da imagem de fundo.",
-        "example": "<div style=\"background-position-x: right;\">Direita</div>",
-        "professionalTip": "Ajuste para alinhar detalhes importantes da imagem.",
+        "label": "Posição X do fundo",
+        "explanation": "Alinha a imagem horizontalmente.",
+        "example": "<div style=\"background-image:url('https://via.placeholder.com/240x80/2563eb/fff'); background-repeat:no-repeat; background-position-x:right; width:240px; height:80px; border:1px solid #ccc\"></div>",
+        "professionalTip": "Ajuste fino para logotipos ou elementos-chave.",
         "variables": [
           "left",
           "center",
@@ -197,10 +195,10 @@
       },
       {
         "name": "background-position-y",
-        "label": "Posição vertical do fundo",
-        "explanation": "Controla a posição vertical da imagem de fundo.",
-        "example": "<div style=\"background-position-y: bottom;\">Fundo embaixo</div>",
-        "professionalTip": "Combine com background-position-x para posicionamento preciso.",
+        "label": "Posição Y do fundo",
+        "explanation": "Alinha a imagem verticalmente.",
+        "example": "<div style=\"background-image:url('https://via.placeholder.com/240x80/2563eb/fff'); background-repeat:no-repeat; background-position-y:bottom; width:240px; height:80px; border:1px solid #ccc\"></div>",
+        "professionalTip": "Combine com position-x para controle preciso.",
         "variables": [
           "top",
           "center",
@@ -208,6 +206,16 @@
           "0%",
           "50%",
           "100%"
+        ]
+      },
+      {
+        "name": "background-repeat-space",
+        "label": "Repetição com espaçamento",
+        "explanation": "Repete a imagem deixando espaço extra entre cada repetição.",
+        "example": "<div style=\"background-image:url('https://via.placeholder.com/40'); background-repeat:space; width:240px; height:80px; border:1px solid #ccc\"></div>",
+        "professionalTip": "Cria padrões mais leves visualmente.",
+        "variables": [
+          "space"
         ]
       }
     ]
