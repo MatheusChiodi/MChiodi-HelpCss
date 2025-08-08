@@ -4,17 +4,17 @@ import { AnimatePresence } from "framer-motion";
 
 import ScrollToTopButton from "./components/layout/ScrollToTopButton";
 import { ScrollToTop } from "./components/layout/ScrollToTop";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
-import Loader from "@/components/layout/Loader";
-import PersistentBackground from "@/components/layout/PersistentBackground";
+import Header from "./components/layout/Header";
+import Footer from "./components/layout/Footer";
+import Loader from "./components/layout/Loader";
+import PersistentBackground from "./components/layout/PersistentBackground";
 
-import Home from "@/page/Home";
-import Study from "@/page/Study";
+import Home from "./page/Home";
+import Study from "./page/Study";
 import ClassDetails from "./page/ClassDetails";
-import NotFoundPage from "@/page/NotFoundPage";
+import NotFoundPage from "./page/NotFoundPage";
 
-import "@/index.css";
+import "./index.css";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
