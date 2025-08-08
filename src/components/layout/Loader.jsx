@@ -70,7 +70,7 @@ export default function Loader() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.4, duration: 0.6 }}
       >
-        Carregando <span className="text-[#FF5555]">KnowledgeHub</span>...
+        Carregando <span className="text-[#FF5555]">HelpCss</span>...
       </motion.p>
     </motion.div>
   );

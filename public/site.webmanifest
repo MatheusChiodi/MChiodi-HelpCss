@@ -1,0 +1,44 @@
+{
+  "name": "MChiodi – HelpCss",
+  "short_name": "HelpCss",
+  "description": "Exemplos didáticos de CSS com visualização ao vivo. Aprenda propriedades de texto, tamanho, layout e muito mais com exemplos claros.",
+  "lang": "pt-BR",
+  "dir": "ltr",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "theme_color": "#111111",
+  "background_color": "#ffffff",
+  "categories": ["education", "technology", "programming", "web development"],
+  "icons": [
+    {
+      "src": "/logo-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/logo-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Abrir exemplos de CSS",
+      "short_name": "Exemplos",
+      "description": "Acesse rapidamente a lista de exemplos de CSS",
+      "url": "/#exemplos",
+      "icons": [{ "src": "/logo-192.png", "sizes": "192x192", "type": "image/png" }]
+    },
+    {
+      "name": "Propriedades de texto",
+      "short_name": "Texto",
+      "description": "Aprenda propriedades de tipografia e cor do texto",
+      "url": "/#texto",
+      "icons": [{ "src": "/logo-192.png", "sizes": "192x192", "type": "image/png" }]
+    }
+  ]
+}
